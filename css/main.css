@@ -1,0 +1,496 @@
+/*-----  Common  ------*/
+.main {
+	width: 100%;
+	background: #95a5a6;
+}
+
+.row {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	background: #2c3e50;
+	color: #bdc3c7;
+}
+
+a {
+	color: #f39c12;
+}
+
+.like-a-code-piece,
+.get-user-info {
+	font-family: Courier;
+}
+
+.thumbnails-wrapper {
+	padding: 5px;
+	background: #95a5a6;
+}
+/*-----  End of Common  ------*/
+
+
+/*-----  Header Section  ------*/
+.header-nav {
+	color: #2c3e50;
+	background: #ecf0f1;
+}
+
+.header-nav_links {
+	list-style: none;
+	color: #DFDAC7;
+	padding: 0 0 0 20px;
+	margin: 0 0 16px 0;
+}
+
+.header-nav_links .nav-link {
+	color: #2c3e50 ;
+}
+
+.header-nav_links:before {
+	content: "var navLinks = [";
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Courier;
+	color: #2c3e50;
+}
+
+.header-nav_links:after {
+	content: "];";
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Courier;
+	color: #2c3e50;
+}
+
+.header-nav_links .nav_links {
+	display: inline-block;
+	font-size: 25px;
+}
+
+.header-nav_links .nav_links:after {
+	content: " ,";
+	font-family: Courier;
+	font-size: 30px;
+	color: #2c3e50;
+}
+/*-----  End of Header Section ------*/
+
+/*-----  Main Page  ------*/
+.main-page-landing-text,
+.index-video {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.main-page-landing-text {
+	padding: 0 20px 0 0;
+  text-align: justify;
+  width: 507px;
+}
+
+.index-video {
+	padding: 74px 0 0 0;
+}
+
+.index-video .thumbnails-wrapper {
+	padding: 5px 5px 2px 5px;
+}
+
+.main-page-info {
+	padding: 0 0 0 20px;
+}
+
+.main_getRandomItem {
+	display: none;
+}
+
+.getRandomItem {
+	background: #A37B45;
+}
+
+.do-getRandomItem {
+	font-family: Courier;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.main_random-list {
+	list-style: none;
+	padding: 0;
+}
+
+.main_random-item {
+	display: inline-block;
+  height: 120px;
+  margin: 0 5px 0 0;
+  width: 284px;
+}
+
+.random-item_link {
+	display: block;
+	height: 100%;
+}
+
+.like-a-random-0 {
+	background: url('../img/random-expl_0.jpeg') no-repeat;
+}
+
+.like-a-random-1 {
+	background: url('../img/random-expl_1.jpeg') no-repeat;
+}
+
+.like-a-random-2 {
+	background: url('../img/random-expl_2.jpeg') no-repeat;
+}
+/*-----  End of Main Page  ------*/
+
+/*-----  List of Some Collection  ------*/
+.lesson-list {
+	list-style: none;
+	margin: 0 0 0 225px;
+}
+
+/* пробелы в значении свойства content при выводе схлапываются. Было найдено вот такое решение */
+.lesson-list:before {
+	content: 'var lessons \0000a0= [';
+	position: absolute;
+	left: 20px;
+	top: 81px;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Courier;
+	color: #bdc3c7;
+}
+
+.lesson-list:after {
+	content: ']';
+	position: absolute;
+	right: 79px;
+	bottom: 69px;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Courier;
+	color: #bdc3c7;
+}
+
+.inline-lesson_img,
+.inline-lesson_info {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.inline-lesson_info {
+	width: 400px;
+}
+
+.inline-lesson_img-wrapper {
+	overflow: hidden;
+	height: 200px;
+	width: 150px;
+	vertical-align: middle;
+}
+
+.inline-lesson_img {
+	-webkit-filter: grayscale(100%);
+
+}
+
+.inline-lesson_img:hover {
+	-webkit-filter: grayscale(0);
+}
+
+.inline-lesson_img_lector-photo {
+	width: 150px;
+}
+
+.inline-lesson-island {
+	position: relative;
+	background: #7f8c8d;
+	color: #ecf0f1;
+	width: 570px;
+	margin: 0 0 5px 0;
+	padding: 8px;
+}
+
+.inline-lesson_title-header {
+	margin: 0 0 11px 0;
+}
+
+.inline-lesson_info {
+	margin: 0 0 0 9px;
+}
+
+.inline-lesson_lector_ya-letter:first-letter {
+	color: #e74c3c;
+}
+
+.inline-lesson_description {
+	font-size: 12px;
+	text-align: justify;
+}
+
+.inline-lesson_lesson-link {
+	color: #2c3e50;
+}
+
+.inline-lesson_footer {
+	position: absolute;
+	bottom: 8px;
+}
+
+.download-btn {
+	display: inline-block;
+	width: 75px;
+	text-align: center;
+	border: none;
+  background: #bdc3c7;
+  color: #2c3e50;
+  padding: 4px 12px 5px;
+  font-size: 13px;
+  line-height: 22px;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-backface-visibility: hidden;
+}
+
+.video-ico {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url('../img/ui-sprites.png') no-repeat;
+	background-position: -29px -1px;
+	vertical-align: middle;
+	margin: 0 0 0 5px;
+}
+
+.slide-ico {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url('../img/ui-sprites.png') no-repeat;
+	background-position: 0px -1px;
+	vertical-align: middle;
+	margin: 0 0 0 5px;
+}
+/*-----  End of List of Some Collestion  ------*/
+
+/*-----  Student Info  ------*/
+.student_info-page {
+	padding: 0 20px 20px;;
+}
+
+.student_top-info{
+	margin: 0 0 10px 0;
+}
+
+.get-user-info {
+	margin: 0 0 13px;
+	font-size: 24px;
+}
+
+.student_info-img,
+.student_main-info {
+	display: inline-block;
+}
+
+.student_main-info {
+	vertical-align: top;
+}
+
+.student_main-info_item-prop {
+	list-style: none;
+}
+
+.student_getInfo-about_text {
+	text-align: justify;
+}
+
+.social-networks-icons_list {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+
+.social-networks_list-item {
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.ico-github,
+.ico-yaru,
+.ico-vk,
+.ico-facebook {
+	background: url('../img/social-icons.png');
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+}
+
+.ico-github {
+	background-position: 0px 0px;
+}
+
+.ico-vk {
+	background-position: 46px 0px;
+}
+
+.ico-facebook {
+	background-position: 96px 0px;
+}
+
+.ico-yaru {
+	background-position: 147px 0px;
+}
+
+.student_getInfo-about_text {
+	position: relative;
+	padding: 0 0 0 39px;
+}
+
+.student_getInfo-about_text:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -6px;
+  top: -20px;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+/*-----  End of Student Info  ------*/
+
+/*-----  Lesson Info  ------*/
+.lesson-info-page {
+	padding: 0px 20px;
+}
+
+.lesson-info_video-and-slides {
+	padding: 0 0 0 160px;
+}
+
+
+/*-----  End of Lesson Info  ------*/
+
+/*-----  Footer  ------*/
+.copyright {
+	padding: 4px 17px 11px;
+}
+/*-----  End of Footer  ------*/
+
+/*-----  List of Student  ------*/
+.row-of-lists {
+	display: inline-block;
+}
+
+.lists-of-something-page {
+	padding: 0 0 0 20px;
+	vertical-align: top;
+}
+
+.list-of-choosed-item {
+ list-style: none;
+ position: relative;
+ padding: 0 0 0 80px;
+}
+
+.list-of-choosed-item:before {
+	content: "{";
+	position: absolute;
+  display: inline-block;
+  font-size: 140px;
+  left: 13px;
+	top: -17px;
+}
+
+.list-of-choosed-item:after {
+	bottom: 4px;
+  content: "}";
+  display: inline-block;
+  font-size: 140px;
+  position: absolute;
+  right: 16px;
+}
+
+.like-a-getJSON {
+	color: #040F01;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Courier;
+	padding: 0 0 0 77px;
+	word-spacing: -1.4em;
+}
+
+.json-elem {
+	vertical-align: middle;
+}
+
+.json-prop {
+	display: inline-block;
+}
+
+.json-prop:after {
+	content: " : ";
+  display: inline-block;
+  font-family: Courier;
+  font-size: 56px;
+}
+
+.json-prop_image {
+	display: inline-block;
+	height: 135px;
+  width: 270px;
+}
+
+.json-img-0 {
+	background: url('../img/json-img_0.jpeg');
+}
+
+.json-img-1 {
+	background: url('../img/json-img_1.jpeg');
+}
+
+.json-img-2 {
+	background: url('../img/json-img_2.jpeg');
+}
+
+.json-value {
+	display: inline-block;
+}
+
+.json-value:after {
+	display: inline-block;
+	content: ' ,';
+	font-size: 57px;
+}
+
+.json-value_output {
+	font-size: 40px;
+}
+/*-----  End of List of Student  ------*/
+
+
+/*-----  Info of Student  ------*/
+.info-out-page {
+	padding: 20px;
+}
+
+.info-img,
+.main-info {
+	display: inline-block;
+}
+
+.main-info {
+	vertical-align: top;
+
+}
+
+.main-info_item-prop {
+	list-style: none;
+}
+
+.getInfo-about_text {
+	text-align: justify;
+}
+/*-----  End Info of Student  ------*/

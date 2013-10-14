@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="row">
+				<header>
+					<nav class="header-nav">
+						<ul class="header-nav_links">
+							<li class="nav_links"><a class="nav-link" href="#/">Главная</a></li>
+							<li class="nav_links"><a class="nav-link" href="#student">Студенты</a></li>
+							<li class="nav_links"><a class="nav-link" href="#lesson">Лекции</a></li>
+						</ul>
+					</nav>
+				</header>
+
+				<div id="container"></div>
+
+				<footer class="page-footer">
+					<hr>
+					<address class="copyright">
+		        RubbleCrew © 2013 | all rights reserved
+		      </address>
+		    </footer>
+			</div>
+		</div>
+
+		<script id="index-template" type="text/template">
+			<article>
+				<section class="main-page-landing-text">
+					<h2>Школа разработки интерфейсов</h2>
+					<p>Школа разработки интерфейсов (ШРИ) организована компанией Яндекс в 2012 году для студентов старших курсов и недавних выпускников вузов, желающих развиваться в области фронтенд-разработки веб-сервисов.</p>
+					<p>Обучение в Школе разработки интерфейсов включает в себя две части. Курс лекций, посвященных различным аспектам промышленной фронтенд-разработки, и более практическую часть, связанную непосредственно с разработкой. Тех, кто успешно пройдёт практику, мы с удовольствием пригласим на работу или стажировку в Яндекс.</p>
+					<p>На занятиях сотрудники Яндекса рассказывают об инструментах разработчика, о том, как лучше и эффективнее вести работу в команде, о приёмах, которые позволяют сэкономить время, немного о дизайне. Практику ведут ведущие фронтенд-разработчики Яндекса, разрабатывающие интерфейсы для Поиска, Почты, Карт, Маркета и других сервисов Яндекса.</p>
+					<p>Все вопросы о Школе присылайте на адрес: <br/><a href="mailto:intern@yandex-team.ru">intern@yandex-team.ru</a></p>
+				</section>
+				<section class="index-video">
+					<div class="thumbnails-wrapper">
+						<iframe width="380" height="214" src="http://www.youtube.com/embed/RbcMW6CvRnY" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</section>
+			</article>
+
+			<footer class="main_getRandomItem">
+				<span class="do-getRandomItem">getRandomItem();</span>
+				<ul class="main_random-list">
+					<li class="main_random-item thumbnails-wrapper"><a class="random-item_link like-a-random-0" href="#"></a></li>
+					<li class="main_random-item thumbnails-wrapper"><a class="random-item_link like-a-random-1" href="#"></a></li>
+					<li class="main_random-item thumbnails-wrapper"><a class="random-item_link like-a-random-2" href="#"></a></li>
+				</ul>
+			</footer>
+		</script>
+
+		<script id="app-layout" type="text/template">
+			<div class="main">
+				<div class="row">
+					<header>
+						<nav class="header-nav">
+							<ul class="header-nav_links">
+								<li class="nav_links"><a class="nav-link" href="#">Главная</a></li>
+								<li class="nav_links"><a class="nav-link" href="#">Студенты</a></li>
+								<li class="nav_links"><a class="nav-link" href="#">Лекции</a></li>
+								<li class="nav_links"><a class="nav-link" href="#">About</a></li>
+							</ul>
+						</nav>
+					</header>
+					<div id="container"></div>
+					<footer class="page-footer">
+						<hr>
+						<address class="copyright">
+			        RubbleCrew © 2013 | all rights reserved
+			      </address>
+			    </footer>
+				</div>
+			</div>
+		</script>
+
+		<script id="inlineStudent-template" type="text/template">
+			<div class="json-prop">
+				<a href="#" class="json-prop_image">
+					<img class="json-prop_image_img" height="150" width="150" src="<%= link_photo %>" alt="<%= first_name %> <%= last_name %>">
+				</a>
+			</div>
+			<div class="json-value">
+				<span class="json-value_output"><%= first_name %> <%= last_name %></span>
+			</div>
+		</script>
+		<script id="inlineLesson-template" type="text/template">
+
+			<aside class="inline-lesson_img">
+				<div class="inline-lesson_img-wrapper">
+					<img class="inline-lesson_img_lector-photo" src="<%= photo %>" alt="<%= nameOfLecturer %>">
+				</div>
+			</aside>
+
+			<article class="inline-lesson_info">
+				<h3 class="inline-lesson_title-header">
+					<a class="inline-lesson_lesson-link" href="#"><%= title %></a>
+				</h3>
+				<span class="inline-lesson_lector">Читает:</span>
+				<span class="inline-lesson_lector_ya-letter"><%= nameOfLecturer %></span>
+				<p class="inline-lesson_description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, atque error soluta architecto reiciendis minus repudiandae magnam voluptate possimus perferendis ipsa aut reprehenderit saepe qui aliquam harum cumque doloremque sint dolorum numquam fugiats!</br><a class="inline-lesson_read-more" href="#">...читать дальше</a>
+				</p>
+
+				<footer class="inline-lesson_footer">
+					<% if (videoDownloadUrl != null) { %>
+					<a href="<%= videoDownloadUrl %>"  class="download-btn video-btn">Видео<i class="video-ico"></i></a>
+					<% }; %>
+					<% if (pdfDownloadUrl != null) { %>
+					<a href="<%= pdfDownloadUrl %>"  class="download-btn slide-btn">Слайды<i class="slide-ico"></i></a>
+					<% }; %>
+				</footer>
+			</article>
+		</script>
+
+		<script id="studentInfo-template" type="text/template">
+			<h4 class="get-user-info">getUserById(<%= id %>);</h4>
+			<header class="student_top-info">
+				<section class="student_info-img">
+					<img src="<%= link_photo %>" alt="<%= first_name%> <%= last_name %>">
+				</section>
+				<section class="student_main-info">
+					<ul class="student_main-info_item-prop">
+						<li class="item-prop">First name: <%= first_name %></li>
+						<li class="item-prop">Last name: <%= last_name %></li>
+						<li class="item-prop">City: <%= city %></li>
+						<li class="social-networks-icons">
+							<ul class="social-networks-icons_list">
+								<li class="social-networks_list-item"><a href="http://<%= link_github %>" class="ico-github"></a></li>
+								<li class="social-networks_list-item"><a href="http://http://http://<%= link_yaru %>" class="ico-yaru"></a></li>
+								<li class="social-networks_list-item"><a href="http://http://<%= link_vk %>" class="ico-vk"></a></li>
+								<li class="social-networks_list-item"><a href="http://<%= link_facebook %>" class="ico-facebook"></a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</header>
+			<article class="student_getInfo-about">
+				<h4 class="get-user-info">getHistory();</h4>
+				<p class="student_getInfo-about_text"><%= about %></p>
+			</article>
+		</script>
+
+		<script id="lessonInfo-template" type="text/template">
+		<h3><%= nameOfLecturer %> читает лекцию "<%= title %>"</h3>
+		<header class="about-and-more-lessons">
+			<section class="lector-info">
+				<div class="lector-info_photo-wrapper">
+					<img src="<%= photo %>" alt="<%= nameOfLecturer %>" class="lector-info_photo">
+				</div>
+				<p class="lector-info_about"><%= about %><% if (about != null) { %>Информация отсутствует<% }; %></p>
+			</section>
+		</header>
+		<section class="lesson-info_video-and-slides">
+			<% if (frameVideo != null) { %>
+			<div class="video-and-slides-wrapper">
+				<iframe class="lesson-video" width="600" height="233" src="http://video.yandex.ru/iframe/ya-events/<%= frameVideo %>/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1" frameborder="0"></iframe>
+			</div>
+			<% }; %>
+			<% if (framePdf != null) { %>
+			<div class="video-and-slides-wrapper">
+				<iframe class="lesson-slides" width="600" height="400" frameborder="0" src="http://www.slideshare.net/slideshow/embed_code/<%= framePdf %>"></iframe>
+			</div>
+			<% }; %>
+		</section>
+		</script>
+
+	<script src="http://yandex.st/underscore/1.5.2/underscore-min.js"></script>
+	<script src="http://yandex.st/jquery/2.0.3/jquery.min.js"></script>
+	<script src="http://yandex.st/backbone/1.0.0/backbone-min.js"></script>
+	<script src="js/students.js"></script>
+	<script src="js/lectors.js"></script>
+	<script src="js/lessons.js"></script>
+	<script src="js/models.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/app.js"></script>
+	</body>
+</html>
